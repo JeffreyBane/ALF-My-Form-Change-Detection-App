@@ -1,0 +1,38 @@
+<form [formGroup]="myFormGroup">
+    <div class="container">
+        <div class="row">
+            <div class="col-2"><label for="myName">Name</label></div>
+            <div class="col-2"><input type="text" id="myName" name="myName" formControlName="myName"></div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-2"><label for="active">Active</label></div>
+            <div class="col-2"><input type="checkbox" id="active" name="active" formControlName="active"></div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-2"><label for="department">Department</label></div>
+            <div class="col-2"><select id="department" name="department" formControlName="department">
+                <option value="">-- Please Select --</option>
+                <option value="1">Sales</option>
+                <option value="2">IT</option>
+                <option value="3">HR</option>
+                </select>
+
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-2"><label for="notes">Notes</label></div>
+            <div class="col-2"><textarea id="notes" name="notes" formControlName="notes"></textarea></div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-2"><button (click)="saveForm()">Save</button></div>
+        </div>
+    
+    </div>
+
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-2">
+                    <a href="javascript:void(0)" (click)="tryToLeavePage()">Leave page</a>
+            </div>
+        </div>
+    </div>
